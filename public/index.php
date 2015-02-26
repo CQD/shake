@@ -22,7 +22,7 @@ $font_size = ($len>5) ? ($base*5/$len) : $base;
 <meta property="og:title" content="抖<?=htmlspecialchars($input)?>" />
 <meta property="og:url" content="<?=htmlspecialchars($actual_link)?>" />
 <meta property="og:description" content="抖你的這個<?=htmlspecialchars($input)?>" />
-<meta property="og:image" content="http://<?=$_SERVER[HTTP_HOST]?>/img/og.png" />
+<meta property="og:image" content="http://<?=$_SERVER['HTTP_HOST']?>/img/og.png" />
 
 <link rel="stylesheet" type="text/css" href="http://elrumordelaluz.github.io/csshake/css/csshake.css">
 <style>
