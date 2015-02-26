@@ -1,0 +1,35 @@
+application: solid-course-86810
+version: dev-master
+runtime: php
+api_version: 1
+threadsafe: true
+
+handlers:
+###################################################
+
+- url: /robots.txt
+  static_files: public/robots.txt
+  upload: public/robots.txt
+
+- url: /cssshake.css
+  static_files: public/csshake.css
+  upload: public/csshake.css
+
+- url: /img
+  static_dir: public/img
+
+####################################################
+
+- url: /.*
+  script: public/index.php
+
+###################################################
+
+# error_handlers:
+# - file: error/default.html
+
+# - error_code: over_quota
+#   file: error/over_quota.html
+
+# - error_code: dos_api_denial
+#   file: error/over_quota.html
