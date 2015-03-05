@@ -3,12 +3,18 @@ $actual_link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
 $input = @$_SERVER['REQUEST_URI'];
 $input = @trim($input);
+$input = @trim($input, '/');
 
-if (empty($input) || '/'===$input) {
+if (empty($input)) {
     $input = "抖";
 } else {
-    $input = substr($input, 1);
     $input = urldecode($input);
+}
+
+if (filter_var($input, FILTER_VALIDATE_URL) && preg_match('@\\.(jpg|png|gif)$@', $input)) {
+    $mode = 'image';
+} else {
+    $mode = 'text';
 }
 
 $len = strlen($input);
@@ -40,6 +46,9 @@ html,body{margin:0;padding:0;background-color:#FFAB52;color:white;height:100%; o
     font-size:<?=(double) $font_size?>em;
     line-height:120%;
 }
+.IS{
+    max-width:80%;
+}
 
 table{
 width:100%;
@@ -51,7 +60,11 @@ height:90%;
 <div class="wrapper">
 <table>
 <tr><td valign="middle">
+<?php if ('text' === $mode) :?>
 <span class="S shake shake-hard shake-constant"><?=htmlspecialchars($input)?></span>
+<?php elseif ('image' === $mode):?>
+<img class="IS shake shake-hard shake-constant" src="<?=htmlspecialchars($input)?>">
+<?php endif;?>
 </td></tr></table>
 </div>
 
