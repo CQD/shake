@@ -27,7 +27,7 @@ if (empty($input)) {
     $input = urldecode($input);
 }
 
-if (filter_var($input, FILTER_VALIDATE_URL) && preg_match('@\\.(jpg|png|gif)$@', $input)) {
+if (filter_var($input, FILTER_VALIDATE_URL) && preg_match('@\\.(jpeg|jpg|png|gif)$@', $input)) {
     $mode = 'image';
 } else {
     $mode = 'text';
