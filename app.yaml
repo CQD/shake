@@ -11,7 +11,7 @@ handlers:
   static_files: public/robots.txt
   upload: public/robots.txt
 
-- url: /cssshake.css
+- url: /csshake.css
   static_files: public/csshake.css
   upload: public/csshake.css
 
