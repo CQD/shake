@@ -1,21 +1,7 @@
 <?php
-// 擋掉討厭的假 referral
-if (isset($_SERVER['HTTP_REFERER'])) {
-    $ref = $_SERVER['HTTP_REFERER'];
-    $bads = [
-        'semalt.com',
-        'buttons-for-website.com',
-    ];
-    foreach ($bads as $bad) {
-        if (false !== strpos($ref, $bad)) {
-            http_response_code(404);
-            die();
-        }
-    }
-}
+include __DIR__ . '/../src/init.php';
 
-
-$actual_link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+$actual_link = $_SERVER['XX_ACTUAL_LINK'];
 
 $input = @$_SERVER['REQUEST_URI'];
 $input = @trim($input);
