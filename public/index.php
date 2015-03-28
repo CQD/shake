@@ -50,6 +50,9 @@ $font_size = ($len>5) ? ($base*5/$len) : $base;
 <link rel="stylesheet" type="text/css" href="/csshake.css">
 <style>
 html,body{margin:0;padding:0;background-color:#FFAB52;color:white;height:100%; overflow:hidden}
+.shake{
+    display:block;
+}
 .wrapper{
     text-align:center;
     padding:2em 1em 3em;
@@ -64,25 +67,24 @@ html,body{margin:0;padding:0;background-color:#FFAB52;color:white;height:100%; o
     line-height:120%;
 }
 .IS{
+    position:relative;
+}
+
+.IS img{
     max-width:80%;
 }
 
-table{
-width:100%;
-height:90%;
-}
 </style>
 </head>
 <body>
 <div class="wrapper">
-<table>
-<tr><td valign="middle">
 <?php if ('text' === $mode) :?>
 <span class="S shake shake-hard shake-constant"><?=htmlspecialchars($input)?></span>
 <?php elseif ('image' === $mode):?>
-<img class="IS shake shake-hard shake-constant" src="<?=htmlspecialchars($input)?>">
+<div class="IS shake shake-hard shake-constant">
+<img src="<?=htmlspecialchars($input)?>">
+</div>
 <?php endif;?>
-</td></tr></table>
 </div>
 
 <script>
