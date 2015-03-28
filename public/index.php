@@ -48,32 +48,11 @@ $font_size = ($len>5) ? ($base*5/$len) : $base;
 
 <!--link rel="stylesheet" type="text/css" href="http://elrumordelaluz.github.io/csshake/css/csshake.css"-->
 <link rel="stylesheet" type="text/css" href="/css/csshake.css">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
 <style>
-html,body{margin:0;padding:0;background-color:#FFAB52;color:white;height:100%; overflow:hidden}
-.shake{
-    display:block;
-}
-.wrapper{
-    text-align:center;
-    padding:2em 1em 3em;
-    width:100%;
-    height:100%;
-    max-width:1500px;
-    margin:0 auto;
-    box-sizing:border-box;
-}
 .S{
     font-size:<?=(double) $font_size?>em;
-    line-height:120%;
 }
-.IS{
-    position:relative;
-}
-
-.IS img{
-    max-width:80%;
-}
-
 </style>
 </head>
 <body>
