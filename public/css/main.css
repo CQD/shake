@@ -4,20 +4,22 @@ html,body{margin:0;padding:0;background-color:#FFAB52;color:white;height:100%; o
 }
 .wrapper{
     text-align:center;
-    padding:2em 1em 3em;
     width:100%;
     height:100%;
-    max-width:1500px;
+}
+.S, .IS{
+    line-height:140%;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    max-width:90%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.S img{
+    max-width:100%;
     margin:0 auto;
-    box-sizing:border-box;
-}
-.S{
-    line-height:120%;
-}
-.IS{
-    position:relative;
-}
-
-.IS img{
-    max-width:80%;
 }

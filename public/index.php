@@ -20,11 +20,13 @@ if (filter_var($input, FILTER_VALIDATE_URL) && preg_match('@\\.(jpeg|jpg|png|gif
 $len = strlen($input);
 $base = 20;
 $font_size = ($len>5) ? ($base*5/$len) : $base;
+$font_size = max(2, $font_size);
 ?><!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="utf-8">
 <title>抖<?=htmlspecialchars($input)?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
 <meta property="og:title" content="抖<?=htmlspecialchars($input)?>" />
 <meta property="og:url" content="<?=htmlspecialchars($actual_link)?>" />
 <meta property="og:description" content="抖你的這個<?=htmlspecialchars($input)?>" />
@@ -41,13 +43,13 @@ $font_size = ($len>5) ? ($base*5/$len) : $base;
 </head>
 <body>
 <div class="wrapper">
+<div class="S">
 <?php if ('text' === $mode) :?>
-<span class="S shake shake-hard shake-constant"><?=htmlspecialchars($input)?></span>
+<span class="shake shake-hard shake-constant"><?=htmlspecialchars($input)?></span>
 <?php elseif ('image' === $mode):?>
-<div class="IS shake shake-hard shake-constant">
-<img src="<?=htmlspecialchars($input)?>">
-</div>
+<img class="shake shake-hard shake-constant" src="<?=htmlspecialchars($input)?>">
 <?php endif;?>
+</div>
 </div>
 
 <script>
