@@ -33,7 +33,7 @@ $font_size = ($len>5) ? ($base*5/$len) : $base;
 <meta property="og:image" content="http://<?=$_SERVER['HTTP_HOST']?>/img/og.png" />
 
 <!--link rel="stylesheet" type="text/css" href="http://elrumordelaluz.github.io/csshake/css/csshake.css"-->
-<link rel="stylesheet" type="text/css" href="/css/csshake.css">
+<link rel="stylesheet" type="text/css" href="/css/csshake.min.css">
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 <style>
 .S{
