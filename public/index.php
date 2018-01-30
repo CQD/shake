@@ -1,8 +1,6 @@
 <?php
 include __DIR__ . '/../src/init.php';
 
-$actual_link = $_SERVER['XX_ACTUAL_LINK'];
-
 $input = @$_SERVER['REQUEST_URI'];
 $input = @trim($input);
 $input = @trim($input, '/');

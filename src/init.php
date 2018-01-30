@@ -19,4 +19,18 @@ if (isset($_SERVER['HTTP_REFERER'])) {
     }
 }
 
-$_SERVER['XX_ACTUAL_LINK'] = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+
+$isHttps =  !empty($_SERVER['HTTPS']) && 'off' !== $_SERVER['HTTPS'];
+
+$actual_link = sprintf("%s://%s%s",
+    $isHttps ? 'https' : 'http',
+    $_SERVER['HTTP_HOST'],
+    $_SERVER['REQUEST_URI']
+);
+
+if (!$isHttps && 'shake.hiigara.net' === $_SERVER['HTTP_HOST']) {
+    $new_url = "https://" . substr($actual_link, 7);
+    http_response_code(301);
+    header("Location: {$new_url}");
+    exit;
+}
