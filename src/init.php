@@ -1,4 +1,9 @@
 <?php
+
+$assetTime = '201801301610';
+
+///////////////////////////////////////////////
+
 // 擋掉討厭的假 referral
 if (isset($_SERVER['HTTP_REFERER'])) {
     $ref = $_SERVER['HTTP_REFERER'];
