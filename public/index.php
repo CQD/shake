@@ -30,7 +30,7 @@ $font_size = ($len>5) ? ($base*5/$len) : $base;
 <meta property="og:description" content="抖你的這個<?=htmlspecialchars($input)?>" />
 <meta property="og:image" content="http://<?=$_SERVER['HTTP_HOST']?>/img/og.png" />
 
-<!--link rel="stylesheet" type="text/css" href="http://elrumordelaluz.github.io/csshake/css/csshake.css"-->
+<!-- http://elrumordelaluz.github.io/csshake/ -->
 <link rel="stylesheet" type="text/css" href="/css/csshake.min.css?v=<?=$assetTime?>">
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=<?=$assetTime?>">
 <style>
