@@ -20,6 +20,7 @@ html,body{margin:0;padding:0;background-color:#FFAB52;color:white;height:100%; o
     transform: translate(-50%, -50%);
 }
 .S img{
-    max-width:100%;
+    max-width:95vw;
+    max-height:90vh;
     margin:0 auto;
 }
