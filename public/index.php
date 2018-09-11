@@ -27,6 +27,7 @@ $font_size = max(2, $font_size);
 <meta charset="utf-8">
 <title>抖<?=htmlspecialchars($input)?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+<link rel="icon" type="image/png" href="/img/favicon.png" />
 <meta property="og:title" content="抖<?=htmlspecialchars($input)?>" />
 <meta property="og:url" content="<?=htmlspecialchars($actual_link)?>" />
 <meta property="og:description" content="抖你的這個<?=htmlspecialchars($input)?>" />
