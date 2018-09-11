@@ -17,6 +17,10 @@ handlers:
 
 ####################################################
 
+- url: /og/img/.*
+  script: public/ogimg.php
+  secure: always
+
 - url: /.*
   script: public/index.php
   secure: always
