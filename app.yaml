@@ -19,6 +19,7 @@ handlers:
 
 - url: /.*
   script: public/index.php
+  secure: always
 
 ###################################################
 
