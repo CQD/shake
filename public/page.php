@@ -29,7 +29,7 @@ $font_size = max(2, $font_size);
 <meta property="og:title" content="抖<?=htmlspecialchars($input)?>" />
 <meta property="og:url" content="<?=htmlspecialchars($actual_link)?>" />
 <meta property="og:description" content="抖你的這個<?=htmlspecialchars($input)?>" />
-<meta property="og:image" content="http://<?=$_SERVER['HTTP_HOST']?>/img/og.png" />
+<meta property="og:image" content="https://<?=$_SERVER['HTTP_HOST']?>/og/img/<?=$input?>" />
 
 <!-- http://elrumordelaluz.github.io/csshake/ -->
 <link rel="stylesheet" type="text/css" href="/css/csshake.min.css?v=<?=$assetTime?>">
